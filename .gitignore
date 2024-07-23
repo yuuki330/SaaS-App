@@ -1,2 +1,7 @@
 src/db.sqlite3
 **/__pycache__/**
+
+# ignore vender static files
+src/staticfiles/vendors
+
+local-cdn
