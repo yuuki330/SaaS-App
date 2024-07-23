@@ -12,6 +12,9 @@ ENV PATH=/opt/venv/bin:$PATH
 # Upgrade pip
 RUN pip install --upgrade pip
 
+ARG DJANGO_SECRET_KEY
+ENV DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
 # Set Python-related environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
