@@ -64,12 +64,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # my-apps
     "commando",
+    "profiles",
     "visits",
     # third-party-apps
     'allauth_ui',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
     'widget_tweaks',
 ]
 
@@ -176,7 +178,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
-
+    "github": {
+        "VERIFIED_EMAIL": True
+    }
 }
 
 # Internationalization
